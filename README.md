@@ -1,4 +1,4 @@
 node-auth-portal
 ================
 
-A passport based login portal that allows access to sites behind proxy
+Reverse proxy that prevents access until the user signs in with passport

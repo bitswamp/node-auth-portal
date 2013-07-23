@@ -1,0 +1,15 @@
+{
+    "targetHost": "localhost"
+  , "targetPort": 8003
+  , "emailFilter": "example.com"
+  , "listenPort": 8002
+  , "loginUrl": "http://example/login"
+  , "cookieSecret": "example"
+  , "cookieOptions": { "domain": ".example.com" }
+
+  , "loginListenPort": 8001
+  , "protectedListenPort": 8002
+  , "loginReturnUrl": "http://example.com/login/google/return"
+  , "loginRealm": "http://*.example.com"
+  , "proxyListenPort": 8000
+}

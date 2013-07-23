@@ -1,0 +1,20 @@
+{
+    "name": "auth-portal",
+    "version": "0.1.0",
+    "author": "Benjamin MacLeod <ben@bitswamp.com>",
+    "description": "Reverse proxy that prevents access until the user signs in with passport",
+    "scripts": {
+        "start": "node ./app.js",
+    },
+    "main": "./app.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bitswamp/node-auth-portal.git"
+    },
+    "dependencies" : {
+        "connect" :  "2.x.x",
+        "passport" :  "0.1.x",
+        "http-proxy" :  "0.10.x",
+        "harmon" :  "0.1.x"
+    }
+}
