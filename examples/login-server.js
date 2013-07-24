@@ -40,8 +40,22 @@ app.configure(function() {
 });
 
 app.get('/', passport.authenticate('google'));
-app.get('/google/return', passport.authenticate('google'), function(req, res) { res.redirect('/login/home'); });
-app.get('/home', function(req, res) {res.end('Login site');});
+app.get('/google/return', passport.authenticate('google'), function(req, res) { 
+  if (req.session.redirectUrl) {
+    var url = req.session.redirectUrl;
+    console.log(url);
+
+    req.session.redirectUrl = null;
+
+    res.redirect(url);
+  }
+  else {
+    res.redirect('/login/home'); 
+  }
+});
+app.get('/home', function(req, res) {
+  res.end('Login site');
+});
 
 app.listen(config.loginListenPort);
 console.log("Express server listening on " + config.loginListenPort);
