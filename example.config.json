@@ -1,15 +1,19 @@
 {
-    "targetHost": "localhost"
-  , "targetPort": 8003
-  , "emailFilter": "example.com"
-  , "listenPort": 8002
-  , "loginUrl": "http://example/login"
-  , "cookieSecret": "example"
-  , "cookieOptions": { "domain": ".example.com" }
+   "listenPort": 8000,
+   "router": {
+        "protected.example.com": "localhost:8001",
+        "www.example.com/protected2": "localhost:8002"
+    },
 
-  , "loginListenPort": 8001
-  , "protectedListenPort": 8002
-  , "loginReturnUrl": "http://example.com/login/google/return"
-  , "loginRealm": "http://*.example.com"
-  , "proxyListenPort": 8000
+    "loginUrl": "http://www.example.com/login",
+    "emailFilter": "@example.com",
+
+    "cookieSecret": "exampleSecret",
+    "cookieOptions": { "domain": ".example.com" },
+
+    "widget": {
+        "divStyle": "position: fixed; left: 0; top: 0; border-radius: 4px; padding-top: 3px; height: 21px; width: 24px; background-color: rgba(180,180,180,0.5); color: gray;",
+        "linkStyle": "display: block; height: 20px; width: 24px; font-family: sans-serif; text-decoration: none; color: gray; text-align: center; font-weight: bold;",
+        "linkText": "X"
+    }
 }

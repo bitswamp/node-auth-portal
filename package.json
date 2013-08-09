@@ -4,7 +4,7 @@
     "author": "Benjamin MacLeod <ben@bitswamp.com>",
     "description": "Reverse proxy that prevents access until the user signs in with passport",
     "scripts": {
-        "start": "node ./app.js",
+        "start": "node ./app.js"
     },
     "main": "./app.js",
     "repository": {
