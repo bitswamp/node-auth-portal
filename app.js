@@ -42,11 +42,11 @@ var server = proxy.createServer(
     function(req, res, next) {
         if (req.isAuthenticated()
             && req.user
-            && req.user.emails
-            && req.user.emails[0].value.indexOf(config.emailFilter) > -1)
+            && req.user.authname
+            && req.user.authname.indexOf(config.emailFilter) > -1)
         {
-            console.log(req.user.emails[0].value);
-            currentUser = req.user.emails[0].value;
+            console.log(req.user.authname);
+            currentUser = req.user.authname;
             return next();
         }
 
